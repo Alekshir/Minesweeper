@@ -5,7 +5,8 @@ Rules of the game:
 
 Mark  all mines at the game board with flags .
 
-LINK TO GIF game.gif
+![](game.gif)
+ game.gif
 
 Controls:
 
