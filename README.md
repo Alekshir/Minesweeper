@@ -51,16 +51,20 @@ LINK TO GIF
 
 folders structure of the project.
 
-public____dist
-    |_____src_____css
-           |______img 
-           |______sound
+ public____
+ 
+            ___dist            
+           |
+           |___src____css
+                 |_____img 
+                 |_____sound
 
-src____components
-   |___initialState
-   |___reducers
-   |___sound
-   |___types
+src____components___
+         
+                    |___initialState
+                    |___reducers
+                    |___sound
+                    |___types`
 
 
    public - folder contains index.html file and other files of build project. Loading index.html in browser starts the game.
