@@ -90,5 +90,5 @@ src____components___
     creates new bundle.js in the "public/dist" folder.
 
 
-- This is what it look like:\
-[I'm an inline-style link](https://alekshir.github.io/)
+- ***This is what it look like:***\
+[Limk to the game](https://alekshir.github.io/)
