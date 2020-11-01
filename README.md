@@ -6,7 +6,6 @@ Rules of the game:
 Mark  all mines at the game board with flags .
 
 ![](game.gif)
- game.gif
 
 Controls:
 
@@ -29,14 +28,14 @@ Settings
   35 mines and 20X20 game board size.
   75 mines and 40X20 or 20X40 board size.
 
-  LINK TO GIF gameSettings
+  ![](gameSettings.gif)
 
 You can register by any name and monitor statistics of your games. All data will be saved in the localStorage of your browser.
 There are two options for statistics data:
  1) Table of the played games.
  2) Chart.
 
- LINK TO GIF gameStat.gif
+ ![](gameStat.gif)
 
 Table represents list of played games. There are date, game duration, result, number of moves and button "replay" for each game.
 Button "replay" invoke imitation of the played game. All moves will be repeated.
@@ -47,7 +46,7 @@ If game will be interrupted inadvertently by computer turn off or browser shutti
 1) restore previous game.
 2) start new game.
 
-LINK TO GIF
+![](gameRestore.gif)
 
 
 folders structure of the project.
