@@ -1,0 +1,1162 @@
+@import url('restoreMenu.css');
+
+html {
+    width: 100%;
+    height: 100%;
+    -ms-content-zooming: none;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgb(18, 4, 34) 0%, rgb(249, 249, 252) 50%, rgb(18, 4, 34) 100%);
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body:after {
+    content:
+        url('../img/cell.jpg') url('../img/cellEmpty.jpg') url('../img/explosion.png') url('../img/flag.jpg') url('../img/happysmile.jpg') url('../img/sorry.jpg') url('../img/succesSmile.jpg') url('../img/mineRed.jpg') url('../img/mineRedCross.jpg') url('../img/Sea_mine2.svg');
+
+    display: none;
+}
+
+.doc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outerFrameTenToTen {
+
+    box-sizing: border-box;
+    width: 60vmin;
+    height: 72.1vmin;
+    display: block;
+    padding: 0%;
+    position: absolute;
+    font-weight: bold;
+    font-size: 5vmin;
+}
+
+.outerFrameTwentyToTwenty {
+
+    box-sizing: border-box;
+    width: 72vmin;
+    height: 86.52vmin;
+    display: block;
+    padding: 0%;
+    position: absolute;
+    font-weight: bold;
+    font-size: 3vmin;
+}
+
+.outerFrameFortyToTwenty {
+    box-sizing: border-box;
+    width: 144vmin;
+    height: 86.52vmin;
+    display: block;
+    padding: 0%;
+    position: absolute;
+    font-weight: bold;
+    font-size: 3vmin;
+}
+
+.outerFrameTwentyToForty {
+    box-sizing: border-box;
+    width: 86.52vmin;
+    height: 144vmin;
+    display: block;
+    padding: 0%;
+    position: absolute;
+    font-weight: bold;
+    font-size: 3vmin;
+
+}
+
+.gameBoardFrame {
+    display: block;
+    box-sizing: border-box;
+    border: 5px solid grey;
+    height: 94%;
+}
+
+.settings {
+    display: flex;
+    position: relative;
+    height: 6%;
+    width: 30%;
+    box-sizing: border-box;
+    background-color: brown;
+    border-radius: 10% 50% 0% 0%;
+    background-color: gray;
+    border-bottom: 2px solid white;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vmin;
+    color: white;
+}
+
+.menu {
+    position: absolute;
+    align-items: stretch;
+    justify-content: space-around;
+    padding-left: 1.5vmin;
+    background-color: gray;
+    font-size: 2.5vmin;
+    font-weight: bold;
+    color: rgb(4, 4, 53);
+    box-shadow: 5px 5px 10px black;
+    z-index: 2;
+}
+
+.menu__item {
+    border: 1px solid white;
+    border-radius: 10%;
+    padding: 1vmin;
+    margin: 1px;
+    cursor: grab;
+
+}
+
+.menu__item:hover {
+    font-size: 3vmin;
+    color: red;
+    text-shadow: 5px 5px 10px;
+    background: black;
+
+}
+
+.menu_open {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.menu_close {
+    display: none;
+}
+
+.settings:hover {
+    color: yellow;
+    cursor: grab;
+}
+
+.controlPanel {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 11.8%;
+    line-height: 100%;
+    text-align: center;
+    background-color: black;
+}
+
+.controlPanel:hover {
+    cursor: crosshair;
+}
+
+.controlPanel__minePanel {
+    display: flex;
+    position: relative;
+    width: 44%;
+    height: 100%;
+    font-size: 3vmin;
+    line-height: 100%;
+    color: red;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.controlPanel__smile {
+    box-sizing: border-box;
+    background-image: url('../img/happysmile.jpg');
+    background-size: 100% 100%;
+    border: 5px outset #b5caae;
+    border-left-color: lavender;
+    border-top-color: lavender;
+    width: 100%;
+    height: 100%;
+}
+
+.active {
+    border: 5px inset;
+}
+
+.controlPanel__smile_sorry {
+    background-image: url('../img/sorry.jpg');
+}
+
+.controlPanel__smile_happy {
+    background-image: url('../img/succesSmile.jpg');
+}
+
+.controlPanel__timer {
+    display: flex;
+    position: relative;
+    width: 44%;
+    height: 100%;
+    font-size: 3vmin;
+    line-height: 100%;
+    color: red;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.board {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 88.2%;
+    background-color: grey;
+    padding-bottom: 0px;
+}
+
+
+.board__cell {
+    box-sizing: border-box;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    background-image: url('../img/cell.jpg');
+    background-size: 100%;
+    font-weight: bold;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board__cell_TenToTen {
+    height: 10.005%;
+    width: 10%;
+}
+
+.board__cell_TwentyToTwenty {
+    height: 5.005%;
+    width: 5%;
+}
+
+.board__cell_FortyToTwenty {
+    height: 5%;
+    width: 2.5%;
+}
+
+.board__cell_TwentyToForty {
+    width: 5%;
+    height: 2.5%;
+}
+
+.board__cell_NoMine {
+    box-sizing: border-box;
+    background-image: url('../img/cellEmpty.jpg');
+    background-size: 100%;
+    border: 2px inset #afb3ab;
+}
+
+.board__cell_Flaged {
+    background-image: url('../img/flag.jpg');
+    background-size: 100%;
+}
+
+.board__cell_HasMine {
+    box-sizing: border-box;
+    background-image: url('../img/mineRed.jpg');
+    background-size: 100%;
+    border: 1px outset red;
+}
+
+.board__cell_CheckedMine {
+    box-sizing: border-box;
+    background-image: url('../img/mineRedCross.jpg');
+    background-size: 100%;
+    border: 1px outset red;
+}
+
+.board__cell_BlueFont {
+    color: blue;
+}
+
+.board__cell_GreenFont {
+    color: green;
+}
+
+.board__cell_RedFont {
+    color: red;
+}
+
+.messageWrapper {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    bottom: 100%;
+    left: 100%;
+    background-color: white;
+    font-size: 0vmin;
+    font-weight: bold;
+    color: red;
+    overflow: hidden;
+    transition: all 1s;
+    z-index: 4;
+    border-radius: 50%;
+}
+
+.messageWrapper_Expand {
+    /*top: -100%;
+    right: -100%;
+    bottom: -100%;
+    left: -100%;*/
+    top: 0%;
+    right: -50%;
+    bottom: 0%;
+    left: -50%;
+    font-size: 6vmin;
+    text-align: center;
+}
+
+.message {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.AnimationExplosion {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    background-image: url('../img/explosion.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    transition: all 1s;
+    z-index: 5;
+    bottom: 0px;
+}
+
+.showAnimationExplosion {
+    height: 300%;
+    width: 200%;
+}
+
+.greetingBackground {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(250, 4, 21, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.greetingMessage {
+    position: relative;
+    background-color: white;
+    font-size: 0px;
+    animation-name: message;
+    animation-duration: 10s;
+    animation-direction: alternate;
+
+}
+
+@keyframes message {
+    from {
+        font-size: 0px;
+        transform: rotateY(0deg);
+        margin-top: 0vmin;
+    }
+
+    50% {
+        font-size: 20vmin;
+        transform: rotateY(720deg);
+        margin-top: 40vmin;
+        padding: 5vmin;
+        box-shadow: 15px 15px 10px black;
+    }
+
+
+    to {
+        font-size: 0px;
+        transform: rotateY(0deg);
+    }
+}
+
+.threeD {
+    /*font-size: 10em;*/
+    font-weight: bold;
+    text-align: center;
+    /*margin: 1em 0;*/
+    color: gold
+        /*#fff*/
+    ;
+    text-shadow:
+        -1px 1px 0 #ddd,
+        -2px 2px 0 #c8c8c8,
+        -3px 3px 0 #ccc,
+        -4px 4px 0 #b8b8b8,
+        -4px 4px 0 #bbb,
+        0px 1px 1px rgba(0, 0, 0, .4),
+        0px 2px 2px rgba(0, 0, 0, .3),
+        -1px 3px 3px rgba(0, 0, 0, .2),
+        -1px 5px 5px rgba(0, 0, 0, .1),
+        -2px 8px 8px rgba(0, 0, 0, .1),
+        -2px 13px 13px rgba(0, 0, 0, .1);
+}
+
+.buttonBallFrame {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24vmin;
+    height: 24vmin;
+    background: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 3vmin;
+    background: radial-gradient(6vmin 6vmin, circle, white, #000);
+    background: -webkit-radial-gradient(6vmin 6vmin, circle, white, #000);
+    background: -moz-radial-gradient(6vmin 6vmin, circle, white, #000);
+    background: -ms-radial-gradient(6vmin 6vmin, circle, white, #000);
+
+
+    /* Animation to spin and move the sphere */
+
+    animation: spin 7000ms linear infinite, moveLeftToRight 7000ms linear infinite, changeSize 7000ms linear infinite;
+    animation-direction: alternate;
+
+    transition: all 3s ease;
+
+    position: absolute;
+    left: 0px;
+    bottom: 100%;
+}
+
+/* Spinning the sphere using key frames */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    45% {
+        transform: rotate(720deg);
+    }
+
+    55% {
+        transform: rotate(720deg);
+    }
+
+    100% {
+        transform: rotate(1440deg);
+    }
+}
+
+
+/* Move sphere from left to right */
+
+@keyframes moveLeftToRight {
+    0% {
+        left: 0%;
+        bottom: 100%;
+    }
+
+    10% {
+        left: 10%;
+        bottom: 38vmin;
+    }
+
+    27% {
+        left: 25%;
+        bottom: 60vmin;
+    }
+
+    45% {
+        left: 40%;
+        bottom: 38vmin;
+    }
+
+    55% {
+        left: 40%;
+        bottom: 38vmin;
+    }
+
+    100% {
+        left: 100%;
+        bottom: 38vmin;
+    }
+
+}
+
+/*change of sphere size*/
+@keyframes changeSize {
+    0% {
+        width: 24vmin;
+        height: 24vmin;
+    }
+
+    44% {
+        width: 24vmin;
+        height: 24vmin;
+
+    }
+
+    45% {
+        width: 36vmin;
+        height: 36vmin;
+
+    }
+
+    54% {
+        width: 36vmin;
+        height: 36vmin;
+
+    }
+
+    55% {
+        width: 24vmin;
+        height: 24vmin;
+    }
+
+
+    100% {
+        width: 24vmin;
+        height: 24vmin;
+    }
+}
+
+.carouselBackground {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: darkblue;
+    overflow: hidden;
+}
+
+.start {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    bottom: 10%;
+    right: 10%;
+}
+
+.main {
+    position: absolute;
+    display: flex;
+    width: 100vW;
+    height: 100vW;
+    left: 0px;
+    top: 0px;
+    animation: 10s linear infinite rotateAll
+}
+
+@keyframes rotateAll {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap:wrap;*/
+    /*align-items: stretch;*/
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 14.285%;
+    /*border:1px solid;*/
+}
+
+.cellMine {
+    box-sizing: border-box;
+    width: 100%;
+    height: 14.285%;
+    /* background: red;*/
+    background-image: url('../img/Sea_mine2.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: 5s linear infinite rotateAll;
+}
+
+.r-one,
+.r-seven {
+    justify-content: center;
+}
+
+.r-two,
+.r-six {
+    justify-content: start;
+}
+
+.margin-top,
+.margin-bottom {
+    width: 100%;
+    height: 14.285%;
+    /*background: yellow;*/
+}
+
+.r-two_cell-one,
+.r-six_cell-one {
+    margin-bottom: auto;
+    margin-top: 100%;
+}
+
+.outerFrameFortyToTwenty .controlPanel__buttonWrapper {
+    width: 9%;
+}
+
+.outerFrameTwentyToForty .controlPanel__buttonWrapper {
+    width: 24%;
+}
+
+.controlPanel__buttonWrapper {
+    position: relative;
+    width: 12%;
+}
+
+.controlPanel__tooltiptext {
+    position: absolute;
+    bottom: 130%;
+    left: calc(calc(-15vmin + 50% - 2.5px));
+    z-index: 1;
+    visibility: hidden;
+    width: 30vmin;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px 0;
+    font-size: 2.5vmin;
+    line-height: normal;
+
+    /* Position the tooltip */
+
+}
+
+.controlPanel__tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    /* At the bottom of the tooltip */
+    left: 50%;
+    border-width: 15px 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.controlPanel__smile:hover+.controlPanel__tooltiptext {
+    visibility: visible;
+}
+
+.controlPanel__minePanel:hover .controlPanel__tooltiptext {
+    visibility: visible;
+}
+
+.controlPanel__timer:hover .controlPanel__tooltiptext {
+    visibility: visible;
+}
+
+.regForm {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(10, 10, 10, 0.8);
+    z-index: 3;
+}
+
+.regForm__button {
+    display: block;
+    width: 40%;
+    height: 10%;
+    /*
+    margin-left: auto;
+    margin-right: auto;
+    */
+    text-align: center;
+    border-radius: 10%;
+    border: 1px solid white;
+    background: darkgrey;
+    font-size: 2.5vmin;
+    color: white;
+}
+
+.regForm__button:hover {
+    font-size: 3vmin;
+    color: red;
+    text-shadow: 5px 5px 10px;
+    background: black;
+    cursor: grab;
+}
+
+.regForm__input {
+    display: block;
+    width: 100%;
+    height: 20%;
+    margin-top: auto;
+    border-radius: 20%;
+    text-align: center;
+    font-size: 3vmin;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.regForm__p {
+    font-size: 3.5vmin;
+    padding: 3vmin;
+    margin-top: auto;
+    margin-bottom: -10%;
+    background: black;
+    color: red;
+    text-align: center;
+    border-radius: 30%;
+    padding: 3vmin;
+    padding-top: 4vmin;
+    font-size: 4vmin;
+    border: 2px solid white;
+}
+
+
+.regForm_rFOpen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.regForm_rFClose {
+    display: none;
+}
+
+.statistics {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(111, 111, 111, 0.5);
+    overflow: hidden;
+}
+
+.statistics_open {
+    display: flex;
+    flex-direction: column;
+}
+
+.statistics__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vmin;
+    height: 90vmin;
+}
+
+.statistics__statPage {
+    position: absolute;
+    top: 10vmin;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vmin;
+    height: 70vmin;
+    min-height: 70vmin;
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: 12px 12px 20px;
+}
+
+.statistics__statPage_tableColor {
+    background: crimson;
+}
+
+.statistics__statPage_chartColor {
+    background: green;
+}
+
+
+.statistics__bookMarkWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 70vmin;
+    height: 10vmin;
+}
+
+.statitstics__bookMarkTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background: crimson;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.statitstics__bookMarkChart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background: green;
+    border-bottom: 2px solid;
+
+}
+
+.statitstics__bookMarkChart_open {
+    border-bottom: 0px solid;
+}
+
+.statitstics__bookMarkTable_open {
+    border-bottom: 0px solid;
+}
+
+.tableRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 100%;
+    height: 10vmin;
+    border-top: 1px solid black;
+    margin-bottom: 2px;
+    background: white;
+    font-size: 2.5vmin;
+
+}
+
+.tableColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+}
+
+.tableColumn>p {
+    margin: 0px;
+}
+
+.tableColumn.one {
+    width: 20%;
+}
+
+.tableColumn.two {
+    width: 20%;
+}
+
+.tableColumn.three {
+    width: 20%;
+}
+
+.tableColumn.four {
+    width: 15%
+}
+
+.tableColumn.five {
+    width: 20%
+}
+
+.tableColumn.five>button {
+    font-size: 2.5vmin;
+}
+
+
+.statistics__statTableBtn {
+    font-size: 2.5vmin;
+    padding: 2vmin;
+    border-radius: 20%;
+    width: 50%;
+    margin-top: auto;
+    text-align: center;
+    cursor: grab;
+    background: darkblue;
+    color: white;
+}
+
+.statistics__statTableBtn:hover {
+    background: red;
+}
+
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vmin;
+    height: 70vmin;
+    background: green;
+}
+
+.chart__container {
+    position: relative;
+    width: 40vmin;
+    height: 40vmin;
+}
+
+.chart__third {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-right-radius: 200% 100%;
+    border-top-right-radius: 200% 100%;
+    height: 100%;
+    width: 50%;
+    background: blue;
+    z-index: 1;
+    box-shadow: 3px 3px;
+}
+
+.chart__first,
+.chart__second {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: red;
+    box-shadow: 10px 1px;
+}
+
+.chart__first {
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 200% 100%;
+    border-top-left-radius: 200% 100%;
+    z-index: 2;
+}
+
+.chart__second {
+    top: 0;
+    right: 0;
+    border-bottom-right-radius: 200% 100%;
+    border-top-right-radius: 200% 100%;
+    z-index: 3;
+    transform-origin: 0px;
+}
+
+.chart__first_color {
+    background: blue;
+}
+
+.chart__first_anotherColor {
+    background: red;
+}
+
+.chart__second_color {
+    background: blue;
+}
+
+.chart__second_anotherColor {
+    background: red;
+}
+
+.chart__third_color {
+    background: blue;
+}
+
+.chart__third_anotherColor {
+    background: red;
+}
+
+
+.chart__legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.chart__victories,
+.chart__defeats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin-right: 5%;
+    font-size: 2.5vmin;
+    font-weight: bold;
+    text-align: center;
+    padding: 2vmin;
+    box-shadow: 2px 5px 10px;
+}
+
+.chart__victories {
+    background: red;
+}
+
+.chart__defeats {
+    background: blue;
+}
+
+.blueColor {
+    background: blue;
+}
+
+.board__cell_redColor {
+    background: red;
+}
+
+.board__cell_roundBorder {
+    border-radius: 50%;
+}
+
+@media (max-width:600px),
+(max-height:600px) {
+
+    .doc {
+        display: block;
+        overflow: auto;
+    }
+
+    .outerFrameTenToTen {
+        display: block;
+        box-sizing: border-box;
+        width: 416px;
+        height: 500px;
+        display: block;
+        top: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0%;
+        position: relative;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .outerFrameTwentyToTwenty {
+        box-sizing: border-box;
+        width: 821.8px;
+        height: 989.796px;
+        display: block;
+        top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0%;
+        position: relative;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .outerFrameFortyToTwenty {
+        box-sizing: border-box;
+        width: 1633.6px;
+        height: 989.796px;
+        display: block;
+        display: block;
+        top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0%;
+        position: relative;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .outerFrameTwentyToForty {
+        box-sizing: border-box;
+        width: 821.8px;
+        height: 1968.957px;
+        display: block;
+        top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px;
+        position: relative;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .board__cell {
+        font-size: 20px;
+    }
+
+    .statistics_open {
+        position: absolute;
+        width: 100%;
+        height: 120%;
+        top: 0px;
+    }
+
+    .controlPanel__timer,
+    .controlPanel__minePanel {
+        font-size: 20px;
+    }
+
+    .settings {
+        font-size: 17px;
+    }
+
+    .menu {
+        font-size: 18px;
+    }
+
+    .controlPanel__smile:hover+.controlPanel__tooltiptext {
+        visibility: hidden;
+    }
+
+    .controlPanel__minePanel:hover .controlPanel__tooltiptext {
+        visibility: hidden;
+    }
+
+    .controlPanel__timer:hover .controlPanel__tooltiptext {
+        visibility: hidden;
+    }
+
+    .regForm {
+        height: 100vh;
+        width: 100vw;
+        position:fixed;
+    }
+
+    .messageWrapper {
+        position:fixed;
+    }
+
+    .messageWrapper_Expand {
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
+        font-size: 6vmin;
+        text-align: center;
+    }
+}
