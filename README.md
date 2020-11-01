@@ -91,4 +91,4 @@ src____components___
 
 
 - ***This is what it look like:***\
-[Limk to the game](https://alekshir.github.io/)
+[Link to the game](https://alekshir.github.io/)
