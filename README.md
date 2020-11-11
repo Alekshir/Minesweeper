@@ -77,17 +77,19 @@ src____components___
 
    src - folder contains entry point index.tsx  and all source files of the project.
 
+   To install dependencies:
+   
+   `npm install`
+
    To run the game:
 
-    npm start
-
-    Opens browser at localhost:3000
+    npm start    
+"Opens browser at localhost:3000"
 
    To build the application:
 
     npm run build
-
-    creates new bundle.js in the "public/dist" folder.
+"creates new bundle.js in the "public/dist" folder."
 
 
 - ***This is what it look like:***\
