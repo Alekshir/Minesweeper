@@ -25195,14 +25195,14 @@ var App = function () {
         if (e.target != refMineAndTimePanel.minePanel.current && e.target != refMineAndTimePanel.timePanel.current)
             return;
         var sizeBox = refDraggable.current.getBoundingClientRect();
-        var deltaX = e.pageX - sizeBox.left;
-        var deltaY = e.pageY - sizeBox.top;
+        var deltaX = e.clientX - sizeBox.left;
+        var deltaY = e.clientY - sizeBox.top;
         refDoc.current.onmousemove = function (e) {
             isDragging.current = true;
             refDraggable.current.style.marginLeft = '0px';
             refDraggable.current.style.marginTop = '0px';
-            refDraggable.current.style.left = (e.pageX - deltaX) + 'px';
-            refDraggable.current.style.top = (e.pageY - deltaY) + 'px';
+            refDraggable.current.style.left = (e.clientX - deltaX) + 'px';
+            refDraggable.current.style.top = (e.clientY - deltaY) + 'px';
         };
         refDoc.current.onmouseup = function (e) {
             setTimeout(function () { isDragging.current = false; }, 500);
@@ -25218,14 +25218,14 @@ var App = function () {
         if (e.targetTouches[0].target != refMineAndTimePanel.minePanel.current && e.targetTouches[0].target != refMineAndTimePanel.timePanel.current)
             return;
         var sizeBox = refDraggable.current.getBoundingClientRect();
-        var deltaX = e.touches[0].pageX - sizeBox.left;
-        var deltaY = e.touches[0].pageY - sizeBox.top;
+        var deltaX = e.touches[0].clientX - sizeBox.left;
+        var deltaY = e.touches[0].clientY - sizeBox.top;
         refDoc.current.ontouchmove = function (e) {
             isDragging.current = true;
             refDraggable.current.style.marginLeft = '0px';
             refDraggable.current.style.marginTop = '0px';
-            refDraggable.current.style.left = (e.touches[0].pageX - deltaX) + 'px';
-            refDraggable.current.style.top = (e.touches[0].pageY - deltaY) + 'px';
+            refDraggable.current.style.left = (e.touches[0].clientX - deltaX) + 'px';
+            refDraggable.current.style.top = (e.touches[0].clientY - deltaY) + 'px';
         };
         refDoc.current.ontouchend = function (e) {
             setTimeout(function () { isDragging.current = false; }, 500);

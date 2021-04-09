@@ -381,15 +381,15 @@ const App = () => {
 
         if (e.target != refMineAndTimePanel.minePanel.current && e.target != refMineAndTimePanel.timePanel.current) return
         const sizeBox = refDraggable.current.getBoundingClientRect();
-        const deltaX = e.pageX - sizeBox.left;
-        const deltaY = e.pageY - sizeBox.top;
+        const deltaX = e.clientX - sizeBox.left;
+        const deltaY = e.clientY - sizeBox.top;
 
         refDoc.current.onmousemove = function (e: MouseEvent) {
             isDragging.current = true;
             refDraggable.current.style.marginLeft = '0px';
             refDraggable.current.style.marginTop = '0px';
-            refDraggable.current.style.left = (e.pageX - deltaX) + 'px';
-            refDraggable.current.style.top = (e.pageY - deltaY) + 'px';
+            refDraggable.current.style.left = (e.clientX - deltaX) + 'px';
+            refDraggable.current.style.top = (e.clientY - deltaY) + 'px';
         }
 
         refDoc.current.onmouseup = function (e: MouseEvent) {
@@ -408,15 +408,15 @@ const App = () => {
 
         if (e.targetTouches[0].target != refMineAndTimePanel.minePanel.current && e.targetTouches[0].target != refMineAndTimePanel.timePanel.current) return;
         const sizeBox = refDraggable.current.getBoundingClientRect();
-        const deltaX = e.touches[0].pageX - sizeBox.left;
-        const deltaY = e.touches[0].pageY - sizeBox.top;
+        const deltaX = e.touches[0].clientX - sizeBox.left;
+        const deltaY = e.touches[0].clientY - sizeBox.top;
 
         refDoc.current.ontouchmove = function (e: React.TouchEvent) {
             isDragging.current = true;
             refDraggable.current.style.marginLeft = '0px';
             refDraggable.current.style.marginTop = '0px';
-            refDraggable.current.style.left = (e.touches[0].pageX - deltaX) + 'px';
-            refDraggable.current.style.top = (e.touches[0].pageY - deltaY) + 'px';
+            refDraggable.current.style.left = (e.touches[0].clientX - deltaX) + 'px';
+            refDraggable.current.style.top = (e.touches[0].clientY - deltaY) + 'px';
         }
 
         refDoc.current.ontouchend = function (e: MouseEvent) {
